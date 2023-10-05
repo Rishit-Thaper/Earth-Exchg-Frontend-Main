@@ -1,0 +1,51 @@
+@mixin commonButton($pad1, $pad2, $color){
+    border: none;
+    padding: $pad1 $pad2;
+    background-color: $color-2;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+    border-radius: 5px;
+    &:hover{
+        background-color: $color;
+    }
+}
+@mixin commonEffect($top, $left){
+        &::after{
+            content: '';
+            position: absolute;
+            top: $top;
+            left: $left;
+            height: 7px;
+            width: 50px;
+            background-color:$color-2; 
+            transform: translateY(-50%);
+        }
+}
+
+@mixin hoverEffect($color){
+    p{
+        color: $color;
+        transition: ease-in-out 0.3s;
+    }
+    a{
+        transition: ease-in-out 0.3s;
+
+    }
+    &:hover{
+        background-color: $color;
+    }
+    &:hover i{
+        color: $a-color;
+    }
+    &:hover p{
+        color: $a-color;
+    }
+    &:hover a{
+        color: $body-color;
+    }
+}
+
+@mixin flexLayout{
+    display: flex;
+    justify-content: center;
+}
